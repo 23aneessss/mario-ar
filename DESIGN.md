@@ -1,4 +1,6 @@
-# Direction visuelle
-Une personne compose une photo à une main, dehors ou à l'intérieur : les commandes anthracite restent lisibles au-dessus d'un flux imprévisible, et le catalogue clair facilite le choix.
+# Interface minimale
 
-Police système, accent rouge, touches jaunes limitées aux repères photo. Viseur plein écran, commandes hautes compactes, déclencheur circulaire blanc, panneau inférieur clair et arrondi. Pas de faux flux caméra au premier démarrage. Transparence réservée aux commandes superposées. Animations d'état brèves, respect de prefers-reduced-motion.
+Caméra plein écran. Aucune marque, aucun logo, aucun slogan.
+Une action « Activer la caméra » au départ. En bas : Éléments, capture, retourner la caméra. En haut : vider et aide. Les réglages apparaissent uniquement pour l’objet sélectionné. Catalogue et aperçu dans des panneaux sobres. Interface française, zones de sécurité mobiles et cibles tactiles de 44 px minimum.
+
+Personnages : modèles arrondis et détaillés selon la référence fournie. L’utilisateur fournit désormais les modèles ; recherche externe arrêtée.

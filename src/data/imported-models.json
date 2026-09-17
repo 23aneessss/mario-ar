@@ -1,0 +1,287 @@
+[
+  {
+    "id": "mario",
+    "name": "Mario",
+    "category": "Personnages",
+    "model": "/models/mario_obj.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/mario-obj-c549d24b60f74d8f85c7a5cbd2f55d0f",
+    "author": "MatiasH290 (https://sketchfab.com/matias029)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "mario-variant",
+    "name": "Mario (variante)",
+    "category": "Personnages",
+    "model": "/models/mario.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/mario-d72579af466f445bbdc4f4be35d80cb2",
+    "author": "ApfelTV (https://sketchfab.com/ApfelTV)",
+    "license": "CC-BY-SA-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB. Variante utilisant le matériau Specular/Glossiness, adapté au rendu Metal/Roughness."
+  },
+  {
+    "id": "mario-mini",
+    "name": "Mario Mini",
+    "category": "Personnages",
+    "model": "/models/mario_mini.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/mario-mini-fce16c31a9f54ec4a809e46dc3090dc6",
+    "author": "danigamer495channel (https://sketchfab.com/danigamer495channel)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "yoshi",
+    "name": "Yoshi",
+    "category": "Personnages",
+    "model": "/models/yoshi_mario_party_10.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/yoshi-mario-party-10-eda1f06b7ce647f6b2fb9da44216de32",
+    "author": "Nintega Dario (https://sketchfab.com/nintegaduigi3)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB. Variante utilisant le matériau Specular/Glossiness, adapté au rendu Metal/Roughness."
+  },
+  {
+    "id": "coin",
+    "name": "Pièce",
+    "category": "Objets",
+    "model": "/models/mario_coin.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/mario-coin-4dcfb41bfd2843348c3f6149483f5a2d",
+    "author": "Alucard (https://sketchfab.com/Ronald.Browen)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "super-mushroom",
+    "name": "Super Mushroom",
+    "category": "Objets",
+    "model": "/models/mario_mushroom.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/mario-mushroom-62773bebfa4449a89bd9753c70fd9a46",
+    "author": "Mr A McBride (https://sketchfab.com/lobsterfuric)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "super-star",
+    "name": "Super Star",
+    "category": "Objets",
+    "model": "/models/super_mario_-_super_star.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/super-mario-super-star-33a47d2de95b4718842763caf48895b9",
+    "author": "kingston.shamily (https://sketchfab.com/kingston.shamily)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "green-shell",
+    "name": "Carapace verte",
+    "category": "Objets",
+    "model": "/models/super_mario_-_green_shell.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/super-mario-green-shell-b5d78d0eb4c44cf9921431db3c34371f",
+    "author": "kingston.shamily (https://sketchfab.com/kingston.shamily)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "question-block",
+    "name": "Bloc « ? »",
+    "category": "Objets",
+    "model": "/models/mystery_block_-_super_mario_odyssey.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/mystery-block-super-mario-odyssey-8203a531490a47ddae08617740e4674c",
+    "author": "Islide (https://sketchfab.com/Islide)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "brick-block",
+    "name": "Bloc de briques",
+    "category": "Objets",
+    "model": "/models/brick_block_super_mario_bros.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/brick-block-super-mario-bros-c12a2715135b4f6a9816efdf90180a8c",
+    "author": "Anthony Yanez (https://sketchfab.com/paulyanez)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "piranha-plant",
+    "name": "Plante Piranha",
+    "category": "Ennemis",
+    "model": "/models/piranha_pflanze_super_mario.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/piranha-pflanze-super-mario-b620a22be32446e9b444b4d7b54cdaad",
+    "author": "(Nintendo) Mario Assets (https://sketchfab.com/Willi2219)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "spiny",
+    "name": "Spiny",
+    "category": "Ennemis",
+    "model": "/models/spiny_super_mario_bros.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/spiny-super-mario-bros-aad78314dc9843c2ab561ba463441a7f",
+    "author": "Anthony Yanez (https://sketchfab.com/paulyanez)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "boomerang-flower",
+    "name": "Fleur boomerang",
+    "category": "Objets",
+    "model": "/models/super_mario_-_boomerang_flower.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/super-mario-boomerang-flower-764c0dba10944f929cae42e39f8f7445",
+    "author": "kingston.shamily (https://sketchfab.com/kingston.shamily)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "luigi-cap",
+    "name": "Casquette de Luigi",
+    "category": "Objets",
+    "model": "/models/luigis_cap_super_mario_bros.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/luigis-cap-super-mario-bros-a86b16aae3664609854537ef95ddf310",
+    "author": "Anthony Yanez (https://sketchfab.com/paulyanez)",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+  },
+  {
+    "id": "mario-cap",
+    "name": "Casquette de Mario",
+    "category": "Objets",
+    "model": "/models/mario_cap_-_3d_printable.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "https://sketchfab.com/3d-models/mario-cap-3d-printable-da54b2232153483ca09cd93841eadbe1",
+    "author": "muvel3d (https://sketchfab.com/muvel3d)",
+    "license": "CC-BY-NC-4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-nc/4.0/",
+    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB. Usage non commercial uniquement."
+  }
+]

@@ -7,7 +7,7 @@ product
 Utilisateurs sur téléphone, principalement Safari iPhone et Chrome Android, et sur ordinateur avec webcam. Ils veulent composer rapidement une photo ludique avec plusieurs modèles 3D, puis la récupérer sur un autre appareil.
 
 ## Product Purpose
-Parcours caméra, ajout, manipulation, capture et partage sans compte. Le cadrage est fixé à l'écran, sans suivi spatial. La capture locale reste indépendante du serveur. Infrastructure auto-hébergée Docker, PostgreSQL et MinIO, conformément à la correction du brief.
+Parcours caméra, ajout, manipulation, capture et partage sans compte. Le cadrage est fixé à l'écran, sans suivi spatial. La capture locale reste indépendante du serveur. Infrastructure auto-hébergée Docker, PostgreSQL et SeaweedFS, conformément à la correction du brief.
 
 ## Brand Personality
 Simple, ludique, soignée. Interface française, peu de texte sur le viseur.

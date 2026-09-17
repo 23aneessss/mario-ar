@@ -1,0 +1,2 @@
+const run=async()=>{try{const response=await fetch('http://app:3000/api/cleanup',{method:'POST',headers:{authorization:`Bearer ${process.env.CLEANUP_SECRET}`},signal:AbortSignal.timeout(60000)});if(!response.ok)throw new Error(`HTTP ${response.status}`);console.log(new Date().toISOString(),await response.text());}catch(error){console.error('Cleanup failed:',error.message);}};
+await run();setInterval(run,60*60*1000);

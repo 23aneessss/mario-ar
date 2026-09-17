@@ -1,0 +1,14 @@
+[
+  {
+    "id": "brick-block",
+    "source": "https://poly.pizza/m/3qcRbHeXEm1",
+    "download": "https://static.poly.pizza/76525a6b-acc3-46f9-9af4-cd6a3b272974.glb",
+    "author": "Shizvayne",
+    "license": "CC-BY-3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "sha256": "220c436acbed97d74e797d31f5412a2073373d7c09add1ac77abe21624d690e3",
+    "bytes": 158700,
+    "changes": "Aucune. Normalisation non destructive au chargement.",
+    "retrievedAt": "2026-09-17"
+  }
+]

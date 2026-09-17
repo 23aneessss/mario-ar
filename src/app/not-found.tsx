@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="shared-page shared-message"><h1>Page introuvable</h1><p>Cette page n’existe pas.</p><a className="primary-button" href="/">Retour à la caméra</a></main>;}
