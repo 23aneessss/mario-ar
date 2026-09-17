@@ -1,0 +1,330 @@
+Tu es un développeur full-stack senior spécialisé dans les expériences web mobiles, Three.js, les interactions tactiles et les interfaces photo.
+
+Construis une web app fonctionnelle appelée « Mario AR Camera ».
+
+OBJECTIF
+
+Créer une expérience simple et soignée qui permet de :
+1. Ouvrir la caméra du téléphone.
+2. Choisir des personnages et objets 3D de l’univers Mario dans un catalogue.
+3. Ajouter plusieurs modèles sur l’image de la caméra.
+4. Les déplacer, redimensionner et faire pivoter avec les doigts.
+5. Prendre une photo qui combine la caméra et les modèles 3D.
+6. Obtenir automatiquement un QR code permettant d’ouvrir cette photo sur un autre appareil et de la télécharger.
+
+Je veux une application réellement utilisable, avec une capture et un partage fonctionnels, pas seulement une maquette.
+
+PÉRIMÈTRE ET COMPORTEMENT AR
+
+Pour cette première version, réaliser une caméra avec une scène 3D transparente superposée au flux vidéo.
+
+Les objets sont positionnés dans le cadre de l’écran : ils restent à leur position dans la composition lorsque le téléphone bouge. Il n’est pas nécessaire de détecter le sol, les murs ou la profondeur.
+
+Ne pas présenter ce comportement comme un ancrage physique dans la pièce.
+
+Ne pas rendre WebXR obligatoire. Prévoir une architecture qui permettra éventuellement d’ajouter un mode AR avec suivi spatial plus tard, sans l’implémenter dans le MVP.
+
+Cibler en priorité Safari sur iPhone et Chrome sur Android. Prévoir aussi un fonctionnement sur ordinateur avec webcam et souris. Vérifier les capacités du navigateur au démarrage.
+
+STACK
+
+Si un projet existe déjà, inspecter sa structure et conserver sa stack lorsqu’elle convient.
+
+Sinon, utiliser :
+- Next.js avec TypeScript.
+- Tailwind CSS pour l’interface.
+- Three.js avec React Three Fiber pour la scène 3D.
+- Drei si utile pour charger les modèles.
+- Zustand si nécessaire pour l’état de la scène.
+- Supabase Storage et Postgres pour les photos et leurs métadonnées.
+- Une bibliothèque QR code maintenue.
+- Des routes serveur pour sécuriser l’enregistrement et l’accès aux photos.
+
+Utiliser des versions stables compatibles entre elles. Éviter les dépendances superflues.
+
+INTERFACE ET DIRECTION VISUELLE
+
+L’application doit ressembler à une caméra mobile moderne.
+
+La caméra occupe l’écran. Les commandes sont discrètes, lisibles et faciles à utiliser d’une seule main.
+
+Style :
+- Interface clean, ludique et soignée.
+- Rouge Mario comme couleur d’accent.
+- Blanc, anthracite et transparences légères pour les contrôles.
+- Boutons arrondis et icônes cohérentes.
+- Touches de jaune pour rappeler les pièces.
+- Typographie simple et lisible.
+- Animations brèves et sobres.
+
+Ne pas créer une landing page marketing, un dashboard ou un long écran d’accueil. L’utilisateur doit accéder rapidement à la caméra.
+
+Tous les textes de l’interface sont en français.
+
+Respecter les zones de sécurité des téléphones, les encoches et les barres du navigateur. Utiliser des cibles tactiles d’au moins 44 × 44 px et une hauteur adaptée aux navigateurs mobiles.
+
+ÉCRAN CAMÉRA
+
+Prévoir :
+- Le flux vidéo en arrière-plan.
+- Les modèles 3D au-dessus.
+- En haut, un petit titre et les commandes secondaires.
+- En bas au centre, un grand bouton de capture.
+- À gauche, un bouton « Éléments » pour ouvrir le catalogue.
+- À droite, un bouton pour basculer entre caméra avant et arrière.
+- Une commande pour vider la scène, avec confirmation si elle contient des objets.
+- Une aide discrète au premier usage : « Choisis un élément, déplace-le et pince pour changer sa taille ».
+
+Demander l’accès à la caméra via une action claire « Activer la caméra ». Utiliser la caméra arrière par défaut.
+
+Ne pas demander le microphone.
+
+Gérer proprement :
+- Autorisation refusée.
+- Caméra introuvable ou occupée.
+- Navigateur incompatible.
+- Accès hors contexte sécurisé.
+- Chargement initial.
+- Changement de caméra.
+- Rotation de l’appareil.
+
+Arrêter les pistes vidéo devenues inutiles. Préserver la composition lors du changement de caméra.
+
+CATALOGUE D’ÉLÉMENTS
+
+Le catalogue s’ouvre dans un panneau venant du bas, refermable par un bouton clair. Il ne doit pas empêcher de retrouver rapidement la caméra.
+
+Prévoir :
+- Un champ de recherche.
+- Des catégories.
+- Une grille avec miniature et nom.
+- Un indicateur pendant le chargement d’un modèle.
+- Un état explicite si un modèle est indisponible.
+
+Catalogue cible :
+
+Personnages :
+Mario, Luigi, Peach, Daisy, Yoshi, Toad, Toadette, Wario, Waluigi, Bowser, Bowser Jr., Rosalina, Donkey Kong et Diddy Kong.
+
+Ennemis :
+Goomba, Koopa Troopa, Boo, Shy Guy, plante Piranha, Bob-omb, Bullet Bill et Lakitu.
+
+Objets et décors :
+Pièce, Super Mushroom, champignon 1-UP, Super Star, fleur de feu, bloc « ? », bloc de briques, tuyau vert, carapace verte, carapace rouge et drapeau d’arrivée.
+
+Le catalogue doit être extensible depuis un fichier de données, sans modifier les composants de l’interface.
+
+Chaque entrée contient au minimum :
+- id ;
+- nom ;
+- catégorie ;
+- chemin du modèle ;
+- miniature ;
+- échelle initiale ;
+- orientation initiale ;
+- statut de disponibilité ;
+- source et informations de licence.
+
+MODÈLES 3D
+
+Utiliser de vrais modèles GLB ou glTF avec textures. Ne pas remplacer silencieusement les personnages par des emojis, des images plates ou des cubes.
+
+Privilégier les fichiers présents dans le projet ou fournis par l’utilisateur. Pour tout modèle externe, vérifier sa source et ses conditions d’utilisation. Ne pas inventer de liens de téléchargement ou prétendre disposer d’assets absents.
+
+Si certains modèles manquent :
+- Construire quand même toute l’application.
+- Rendre les entrées concernées clairement indisponibles.
+- Indiquer précisément les fichiers à ajouter.
+- Prévoir un emplacement simple comme public/models et public/thumbnails.
+- Fournir quelques objets 3D procéduraux simples pour tester le parcours, explicitement identifiés comme éléments de démonstration.
+
+Ne pas considérer le catalogue de personnages comme terminé tant que les modèles correspondants ne sont pas intégrés.
+
+Normaliser le cadrage et la taille des modèles à leur chargement. Prévoir un éclairage doux qui garde leurs couleurs lisibles.
+
+Charger les modèles à la demande, mettre en cache les ressources et éviter de charger tout le catalogue au démarrage.
+
+INTERACTIONS AVEC LES OBJETS
+
+Au clic sur un élément disponible :
+- Charger le modèle.
+- L’ajouter au centre de la zone visible.
+- Lui donner une taille initiale raisonnable.
+- Le sélectionner automatiquement.
+- Réduire le catalogue pour permettre sa manipulation.
+
+Autoriser plusieurs objets, y compris plusieurs exemplaires d’un même modèle.
+
+Gestes :
+- Toucher un objet pour le sélectionner.
+- Glisser avec un doigt pour le déplacer.
+- Pincer avec deux doigts pour modifier sa taille.
+- Tourner avec deux doigts pour modifier son orientation dans le cadre.
+- Toucher une zone vide pour désélectionner.
+
+Prévoir aussi une commande simple permettant de tourner le personnage sur son axe vertical pour changer la direction vers laquelle il regarde.
+
+Lorsqu’un objet est sélectionné, afficher une petite barre :
+- Dupliquer.
+- Supprimer.
+- Réinitialiser sa transformation.
+- Ajuster sa rotation.
+
+La sélection doit être visible mais discrète, et ne doit jamais apparaître sur la photo exportée.
+
+Utiliser une détection précise des objets sélectionnés. Empêcher le défilement et le zoom du navigateur sur la surface de manipulation, sans bloquer le défilement du catalogue.
+
+Éviter les sauts de position lors du passage d’un à deux doigts. Limiter les tailles extrêmes et conserver un moyen de récupérer un objet déplacé hors du cadre.
+
+Sur ordinateur, fournir des interactions équivalentes avec la souris et des contrôles de taille/rotation.
+
+Limiter initialement la scène à 10 objets pour préserver les performances, avec un message clair si cette limite est atteinte.
+
+CAPTURE PHOTO
+
+Au clic sur le déclencheur :
+1. Capturer une image du flux caméra.
+2. Rendre la scène 3D correspondant au même instant.
+3. Composer les deux dans une image finale.
+4. Afficher immédiatement l’aperçu.
+5. Lancer son enregistrement pour préparer le partage.
+
+L’image finale doit contenir uniquement la photo et les modèles 3D : aucun bouton, catalogue, contour de sélection ou message.
+
+Ne pas faire une simple capture HTML de la page.
+
+La photo doit correspondre exactement au cadrage visible :
+- Même ratio.
+- Même recadrage du flux vidéo.
+- Mêmes positions, tailles et orientations des objets.
+- Même effet miroir pour la caméra avant.
+- Orientation correcte en portrait et en paysage.
+
+Prendre en compte object-fit: cover, les dimensions intrinsèques de la vidéo et la résolution du canvas pour éviter les décalages.
+
+Synchroniser le rendu 3D et la capture. Éviter les images noires ou les modèles absents dans l’export.
+
+Exporter en JPEG de bonne qualité, avec une résolution adaptée à la caméra et une limite raisonnable pour la mémoire mobile, par exemple 1920 px sur le plus grand côté.
+
+Permettre de télécharger immédiatement la photo sur l’appareil, même si son envoi au serveur échoue.
+
+QR CODE ET PARTAGE
+
+Le QR code doit contenir une URL HTTPS publique vers une page photo, et non les données binaires de l’image.
+
+Parcours :
+1. Capturer la photo.
+2. L’enregistrer dans le stockage.
+3. Créer un identifiant de partage aléatoire et difficile à deviner.
+4. Retourner une URL de type https://domaine.com/p/<token>.
+5. Générer le QR code à partir de cette URL.
+
+Ne jamais utiliser localhost, une URL blob ou une adresse accessible uniquement sur le téléphone d’origine comme lien de partage.
+
+Afficher le QR code uniquement lorsque la photo est effectivement enregistrée et accessible.
+
+L’écran de résultat contient :
+- L’aperçu de la photo.
+- Le QR code sur fond blanc avec une marge suffisante.
+- Le texte « Scanne pour récupérer ta photo ».
+- « Télécharger ».
+- « Copier le lien ».
+- « Partager » lorsque le navigateur le permet.
+- « Reprendre une photo », en conservant la composition.
+
+Pendant l’envoi, afficher un état de progression. En cas d’échec, conserver la photo et proposer « Réessayer ».
+
+Éviter les doubles enregistrements dus aux clics répétés ou aux tentatives de renvoi.
+
+PAGE PHOTO PARTAGÉE
+
+La route /p/<token> doit fonctionner sur un autre appareil, sans compte et sans accès à la caméra.
+
+Afficher :
+- La photo en grand.
+- Un bouton principal « Télécharger la photo ».
+- Une action de partage si disponible.
+- La date d’expiration.
+
+Prévoir un téléchargement servi avec les bons en-têtes HTTP. Si le navigateur mobile ne permet pas l’enregistrement direct, proposer l’ouverture de l’image avec une instruction simple pour l’enregistrer.
+
+Prévoir des états propres pour un lien inexistant, expiré ou une image inaccessible.
+
+PHOTOS ET STOCKAGE
+
+Pas de création de compte pour utiliser l’application.
+
+Par défaut, conserver les photos 7 jours. Rendre cette durée configurable.
+
+Indiquer près de la capture ou dans l’aperçu :
+« Les photos partagées sont accessibles par leur lien pendant 7 jours. »
+
+Toute personne disposant du lien peut voir la photo. Ne pas créer de galerie publique et ne pas rendre le stockage listable.
+
+Utiliser un stockage privé avec un accès contrôlé par le serveur ou des URL signées temporaires. Le lien contenu dans le QR code doit rester celui de la page de partage pendant toute la durée de conservation.
+
+Prévoir :
+- Validation du type et de la taille des fichiers.
+- Limitation des requêtes d’envoi.
+- Secrets accessibles uniquement côté serveur.
+- Suppression des photos et métadonnées expirées par une tâche planifiée.
+- Exclusion des pages photo des moteurs de recherche.
+- Aucun enregistrement continu du flux caméra.
+
+Si les services externes ne sont pas configurés, la caméra, les modèles et la capture locale doivent rester utilisables. Afficher « Partage indisponible » et expliquer dans le README les variables manquantes. Ne pas produire un faux QR code de démonstration.
+
+ARCHITECTURE ET LIVRABLES
+
+Séparer clairement :
+- Gestion de la caméra.
+- Catalogue d’assets.
+- Scène 3D.
+- Manipulations tactiles.
+- Composition de la photo.
+- Envoi et stockage.
+- Génération du QR code.
+- Page de consultation et téléchargement.
+
+Livrer :
+- Le code complet.
+- Un fichier .env.example sans secrets.
+- Les migrations et règles d’accès nécessaires.
+- La tâche de nettoyage des photos expirées.
+- Un README avec installation, lancement local, configuration et déploiement HTTPS.
+- Une procédure pour ajouter un modèle et sa miniature.
+- Une liste honnête des assets manquants et des limites restantes.
+
+Ne pas ajouter de fonctionnalités hors périmètre : comptes, réseau social, galerie publique, paiement, vidéo ou reconnaissance d’images.
+
+VALIDATION
+
+Vérifier les points suivants :
+- Activation et refus de la caméra.
+- Caméras avant et arrière.
+- Ajout et manipulation de plusieurs modèles.
+- Duplication et suppression.
+- Déplacement, pincement et rotation sur écran tactile.
+- Fidélité entre aperçu et photo exportée.
+- Capture en portrait et en paysage.
+- Téléchargement local.
+- Enregistrement réel d’une photo.
+- Scan du QR code depuis un second appareil.
+- Consultation et téléchargement sans connexion à un compte.
+- Gestion d’un lien expiré et d’un échec réseau.
+
+Automatiser les vérifications pertinentes, notamment les calculs de cadrage et le cycle de partage. Documenter les vérifications à faire sur de vrais téléphones.
+
+Ne pas prétendre avoir testé un appareil ou un navigateur sans l’avoir réellement fait.
+
+MÉTHODE DE TRAVAIL
+
+Commencer par inspecter le projet et les assets disponibles, puis annoncer un plan court et implémenter l’application.
+
+Faire des choix raisonnables sans demander confirmation à chaque détail. Ne poser une question que si une information bloque réellement le travail.
+
+Prioriser une chaîne complète fonctionnelle :
+caméra → objet 3D → manipulation → capture → stockage → QR code → téléchargement sur un autre appareil.
+
+Ensuite, finaliser le design, les performances et l’intégration du catalogue.
+
+À la livraison, expliquer brièvement comment lancer le projet, ce qui fonctionne, ce qui a été testé et ce qui nécessite encore des modèles ou une configuration externe.
