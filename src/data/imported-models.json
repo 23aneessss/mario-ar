@@ -3,7 +3,7 @@
     "id": "mario",
     "name": "Mario",
     "category": "Personnages",
-    "model": "/models/mario_obj.glb",
+    "model": "/models/mario.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -19,29 +19,10 @@
     "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
   },
   {
-    "id": "mario-variant",
-    "name": "Mario (variante)",
-    "category": "Personnages",
-    "model": "/models/mario.glb",
-    "thumbnail": null,
-    "initialScale": 1,
-    "initialRotation": [
-      0,
-      0,
-      0
-    ],
-    "status": "available",
-    "source": "https://sketchfab.com/3d-models/mario-d72579af466f445bbdc4f4be35d80cb2",
-    "author": "ApfelTV (https://sketchfab.com/ApfelTV)",
-    "license": "CC-BY-SA-4.0",
-    "licenseUrl": "http://creativecommons.org/licenses/by-sa/4.0/",
-    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB. Variante utilisant le matériau Specular/Glossiness, adapté au rendu Metal/Roughness."
-  },
-  {
     "id": "mario-mini",
     "name": "Mario Mini",
     "category": "Personnages",
-    "model": "/models/mario_mini.glb",
+    "model": "/models/mario-mini.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -60,7 +41,7 @@
     "id": "yoshi",
     "name": "Yoshi",
     "category": "Personnages",
-    "model": "/models/yoshi_mario_party_10.glb",
+    "model": "/models/yoshi.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -79,7 +60,7 @@
     "id": "coin",
     "name": "Pièce",
     "category": "Objets",
-    "model": "/models/mario_coin.glb",
+    "model": "/models/coin.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -88,17 +69,17 @@
       0
     ],
     "status": "available",
-    "source": "https://sketchfab.com/3d-models/mario-coin-4dcfb41bfd2843348c3f6149483f5a2d",
-    "author": "Alucard (https://sketchfab.com/Ronald.Browen)",
-    "license": "CC-BY-4.0",
-    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
-    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
   },
   {
     "id": "super-mushroom",
     "name": "Super Mushroom",
     "category": "Objets",
-    "model": "/models/mario_mushroom.glb",
+    "model": "/models/mushroom.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -117,7 +98,7 @@
     "id": "super-star",
     "name": "Super Star",
     "category": "Objets",
-    "model": "/models/super_mario_-_super_star.glb",
+    "model": "/models/star.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -136,7 +117,7 @@
     "id": "green-shell",
     "name": "Carapace verte",
     "category": "Objets",
-    "model": "/models/super_mario_-_green_shell.glb",
+    "model": "/models/green-shell.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -155,7 +136,7 @@
     "id": "question-block",
     "name": "Bloc « ? »",
     "category": "Objets",
-    "model": "/models/mystery_block_-_super_mario_odyssey.glb",
+    "model": "/models/question-block.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -174,7 +155,7 @@
     "id": "brick-block",
     "name": "Bloc de briques",
     "category": "Objets",
-    "model": "/models/brick_block_super_mario_bros.glb",
+    "model": "/models/brick-block.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -193,7 +174,7 @@
     "id": "piranha-plant",
     "name": "Plante Piranha",
     "category": "Ennemis",
-    "model": "/models/piranha_pflanze_super_mario.glb",
+    "model": "/models/piranha_plant.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -202,17 +183,17 @@
       0
     ],
     "status": "available",
-    "source": "https://sketchfab.com/3d-models/piranha-pflanze-super-mario-b620a22be32446e9b444b4d7b54cdaad",
-    "author": "(Nintendo) Mario Assets (https://sketchfab.com/Willi2219)",
-    "license": "CC-BY-4.0",
-    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
-    "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB."
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
   },
   {
     "id": "spiny",
     "name": "Spiny",
     "category": "Ennemis",
-    "model": "/models/spiny_super_mario_bros.glb",
+    "model": "/models/spiny.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -231,7 +212,7 @@
     "id": "boomerang-flower",
     "name": "Fleur boomerang",
     "category": "Objets",
-    "model": "/models/super_mario_-_boomerang_flower.glb",
+    "model": "/models/boomerang-flower.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -250,7 +231,7 @@
     "id": "luigi-cap",
     "name": "Casquette de Luigi",
     "category": "Objets",
-    "model": "/models/luigis_cap_super_mario_bros.glb",
+    "model": "/models/luigi-cap.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -269,7 +250,7 @@
     "id": "mario-cap",
     "name": "Casquette de Mario",
     "category": "Objets",
-    "model": "/models/mario_cap_-_3d_printable.glb",
+    "model": "/models/mario-cap.glb",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -283,5 +264,404 @@
     "license": "CC-BY-NC-4.0",
     "licenseUrl": "http://creativecommons.org/licenses/by-nc/4.0/",
     "note": "Fichier fourni par l’utilisateur. Attribution issue des métadonnées GLB. Usage non commercial uniquement."
+  },
+  {
+    "id": "luigi",
+    "name": "Luigi",
+    "category": "Personnages",
+    "model": "/models/luigi.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "peach",
+    "name": "Peach",
+    "category": "Personnages",
+    "model": "/models/peach-low.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "daisy",
+    "name": "Daisy",
+    "category": "Personnages",
+    "model": "/models/daisy.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "toad",
+    "name": "Toad",
+    "category": "Personnages",
+    "model": "/models/toad.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "toadette",
+    "name": "Toadette",
+    "category": "Personnages",
+    "model": "/models/toadette.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "wario",
+    "name": "Wario",
+    "category": "Personnages",
+    "model": "/models/wario.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "waluigi",
+    "name": "Waluigi",
+    "category": "Personnages",
+    "model": "/models/waluigi.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "bowser",
+    "name": "Bowser",
+    "category": "Personnages",
+    "model": "/models/bowser.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "kirby",
+    "name": "Kirby",
+    "category": "Personnages",
+    "model": "/models/kirby.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "goomba",
+    "name": "Goomba",
+    "category": "Ennemis",
+    "model": "/models/goomba.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "koopa-troopa",
+    "name": "Koopa Troopa",
+    "category": "Ennemis",
+    "model": "/models/koopa_troopa.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "boo",
+    "name": "Boo",
+    "category": "Ennemis",
+    "model": "/models/boo.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "shy-guy",
+    "name": "Shy Guy",
+    "category": "Ennemis",
+    "model": "/models/shy_guy.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "bob-omb",
+    "name": "Bob-omb",
+    "category": "Ennemis",
+    "model": "/models/bob-omb.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "bullet-bill",
+    "name": "Bullet Bill",
+    "category": "Ennemis",
+    "model": "/models/bullet_bill.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "lakitu",
+    "name": "Lakitu",
+    "category": "Ennemis",
+    "model": "/models/lakitu.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "1up-mushroom",
+    "name": "Champignon 1-UP",
+    "category": "Objets",
+    "model": "/models/1-up_mushroom.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "fire-flower",
+    "name": "Fleur de feu",
+    "category": "Objets",
+    "model": "/models/fire_flower.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "green-pipe",
+    "name": "Tuyau vert",
+    "category": "Objets",
+    "model": "/models/warp_pipe.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "red-shell",
+    "name": "Carapace rouge",
+    "category": "Objets",
+    "model": "/models/red_shell.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
+  },
+  {
+    "id": "finish-flag",
+    "name": "Drapeau d’arrivée",
+    "category": "Objets",
+    "model": "/models/flagpole.glb",
+    "thumbnail": null,
+    "initialScale": 1,
+    "initialRotation": [
+      0,
+      0,
+      0
+    ],
+    "status": "available",
+    "source": "URL de téléchargement",
+    "author": "Nom de l’auteur",
+    "license": "Licence du modèle",
+    "licenseUrl": "URL de la licence",
+    "note": "Attribution éventuelle."
   }
 ]

@@ -14,8 +14,6 @@ function Model({item,onError}:{item:SceneItem;onError:(id:string)=>void}) {
   return <group position={[item.x*aspect,item.y,0]} rotation={[0,0,item.roll]} scale={scale} userData={{itemId:item.id}}>
     <group rotation={[asset.initialRotation[0],item.yaw,asset.initialRotation[2]]}>
       {model&&<primitive object={model} dispose={null}/>}
-      {item.assetId==='demo-orb'&&<mesh><sphereGeometry args={[.5,36,24]}/><meshStandardMaterial color="#ef4547" roughness={.27} metalness={.08}/></mesh>}
-      {item.assetId==='demo-ring'&&<mesh rotation={[.18,.25,0]}><torusGeometry args={[.34,.14,20,48]}/><meshStandardMaterial color="#f7c54b" roughness={.3} metalness={.25}/></mesh>}
     </group>
   </group>;
 }
