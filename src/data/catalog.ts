@@ -12,9 +12,9 @@ const groups = {
 const suppliedModels = importedModels as Asset[];
 const overrides: Record<string, Asset> = Object.fromEntries(suppliedModels.map(asset => [asset.id, asset]));
 const baseIds = new Set(Object.values(groups).flatMap(entries => entries.map(([id]) => id)));
-export const catalog: Asset[] = Object.entries(groups).flatMap(([category, entries]) => entries.map(([id,name]) => ({
+export const catalog: Asset[] = Object.entries(groups).flatMap(([category, entries]) => entries.map(([id,name]) => overrides[id] ?? ({
   id,name,category:category as Asset['category'],model:null,thumbnail:null,initialScale:1,initialRotation:[0,0,0] as [number,number,number],status:'unavailable' as const,source:null,author:null,license:null,licenseUrl:null,
-  note:`Modèle conforme et redistribuable non intégré. Fichier attendu : public/models/${id}.glb. Ajoutez le fichier et sa miniature pour activer cet élément.`, ...overrides[id]
+  note:`Modèle conforme et redistribuable non intégré. Fichier attendu : public/models/${id}.glb. Ajoutez le fichier et sa miniature pour activer cet élément.`
 }))).concat(suppliedModels.filter(asset => !baseIds.has(asset.id))).concat([
   {id:'demo-orb',name:'Bulle studio',category:'Démo',model:null,thumbnail:null,initialScale:1,initialRotation:[0,0,0],status:'demo',source:null,author:'Mario AR Camera',license:'CC0',licenseUrl:'https://creativecommons.org/publicdomain/zero/1.0/',note:'Objet procédural de démonstration, aucun personnage remplacé.'},
   {id:'demo-ring',name:'Anneau studio',category:'Démo',model:null,thumbnail:null,initialScale:1,initialRotation:[0,0,0],status:'demo',source:null,author:'Mario AR Camera',license:'CC0',licenseUrl:'https://creativecommons.org/publicdomain/zero/1.0/',note:'Objet procédural de démonstration, aucun personnage remplacé.'}

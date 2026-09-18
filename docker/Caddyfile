@@ -1,6 +1,3 @@
-{
-  email {$ACME_EMAIL}
-}
 {$APP_DOMAIN} {
   request_body {
     max_size 8MB
@@ -11,4 +8,10 @@
     header_up X-Forwarded-For {remote_host}
   }
   header Strict-Transport-Security "max-age=31536000"
+}
+
+# OpenScaler exposes the project at this legacy HTTP port. Keep that address
+# working, but move browsers to the secure origin required by camera APIs.
+http://{$APP_DOMAIN}:9264 {
+  redir https://{$APP_DOMAIN}{uri} permanent
 }

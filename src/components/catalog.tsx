@@ -18,7 +18,7 @@ export function Catalog({open,onClose,onAdd,loading}:{open:boolean;onClose:()=>v
             {a.thumbnail?<img src={a.thumbnail} alt="" loading="lazy"/>:a.model&&a.status==='available'?<ModelThumbnail asset={a}/>:a.status==='demo'?(a.id==='demo-ring'?<Circle size={56} strokeWidth={5}/>:<CircleDot size={56} strokeWidth={1.3}/>):<Box size={36} strokeWidth={1}/>}
             <span className="asset-badge">{loading===a.id?<LoaderCircle size={16} className="spin"/>:a.status==='unavailable'?<LockKeyhole size={13}/>:<Plus size={16}/>}</span>
           </div>
-          <strong>{a.name}</strong><span className="asset-status">{a.status==='available'?'Prêt à placer':a.model&&a.status==='available'?<ModelThumbnail asset={a}/>:a.status==='demo'?'Démo procédurale':'Modèle à ajouter'}</span>
+          <strong>{a.name}</strong><span className="asset-status">{a.status==='available'?'Prêt à placer':a.status==='demo'?'Démo procédurale':'Modèle à ajouter'}</span>
         </button>
       </article>)}</div>
       {filtered.length===0&&<p className="empty-state">Aucun élément pour cette recherche.</p>}

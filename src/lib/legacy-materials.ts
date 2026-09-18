@@ -17,6 +17,7 @@ export function legacyMaterials(parser: GLTFParser) {
         };
         delete material.extensions.KHR_materials_pbrSpecularGlossiness;
       }
+      return null;
     },
   };
 }

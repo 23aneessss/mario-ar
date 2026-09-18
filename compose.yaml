@@ -38,7 +38,7 @@ services:
     environment:
       DATABASE_URL: postgres://${POSTGRES_USER:-mario}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-mario}
       S3_ENDPOINT: http://storage:8333
-    ports: ["127.0.0.1:${APP_PORT:-3000}:3000"]
+    ports: ["${APP_BIND_ADDRESS:-127.0.0.1}:${APP_PORT:-3000}:3000"]
     depends_on:
       db: {condition: service_healthy}
       storage: {condition: service_healthy}
@@ -60,7 +60,11 @@ services:
     image: caddy:2-alpine
     profiles: [https]
     restart: unless-stopped
-    ports: ["80:80", "443:443", "443:443/udp"]
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+      - "9264:9264"
     environment:
       APP_DOMAIN: ${APP_DOMAIN}
       ACME_EMAIL: ${ACME_EMAIL}

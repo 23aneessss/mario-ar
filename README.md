@@ -28,6 +28,8 @@ docker compose up -d --build
 
 `APP_PORT` dans `.env` permet de changer le port HTTP local. PostgreSQL utilise le port local 5434 ; le stockage S3 utilise 8333. Les volumes `postgres_data` et `storage_data` conservent les données après un redémarrage. Le service `cleanup` supprime les photos expirées toutes les heures. Ne pas supprimer les volumes pour une mise à jour.
 
+Pour un port forwarding OpenScaler, régler `APP_PORT` sur le port interne affiché dans le tableau de bord et `APP_BIND_ADDRESS=0.0.0.0`. Dans la configuration actuelle, le port public `9264` cible le port interne `3001`.
+
 Le script `setup:env` génère les secrets locaux sans les afficher. Il ne remplace jamais un `.env` existant. Les variables serveur ne sont pas exposées au navigateur.
 
 ## Activer le partage HTTPS
@@ -49,6 +51,8 @@ docker compose --profile https up -d --build
 ```
 
 Caddy sert l’application avec HTTPS. Il remplace les en-têtes d’adresse cliente utilisés pour la limitation des envois. Garder `TRUST_PROXY=false` en accès direct ; dans ce cas, la limite est partagée entre les clients. La limite est de 30 envois par fenêtre de 10 minutes. La durée des photos est configurable entre 1 et 30 jours.
+
+Sur OpenScaler, le port public historique `9264` est servi en HTTP uniquement pour rediriger vers l’origine HTTPS standard. Ainsi, `http://app.alpha.openscaler.net:9264` mène automatiquement à `https://app.alpha.openscaler.net`, où l’accès caméra est autorisé par le navigateur.
 
 Le QR code est généré seulement après l’enregistrement et une vérification HTTP de l’image par son adresse publique. Aucun QR code localhost, blob ou de démonstration n’est affiché. Le serveur doit pouvoir joindre son propre domaine public.
 
