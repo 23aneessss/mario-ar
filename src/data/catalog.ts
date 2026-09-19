@@ -4,5 +4,5 @@ export type Asset = {
   initialScale: number; initialRotation: [number,number,number];
   source: string; author: string; license: string; licenseUrl: string; note: string;
 };
-export const catalog: Asset[] = importedModels as Asset[];
+export const catalog: Asset[] = importedModels as unknown as Asset[];
 export const assetById = (id: string) => catalog.find(a => a.id === id)!;

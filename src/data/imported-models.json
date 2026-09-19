@@ -3,7 +3,7 @@
     "id": "mario",
     "name": "Mario",
     "category": "Personnages",
-    "model": "/models/mario.glb",
+    "model": "/models/mario.glb?v=lowered55",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -41,7 +41,7 @@
     "id": "yoshi",
     "name": "Yoshi",
     "category": "Personnages",
-    "model": "/models/yoshi.glb",
+    "model": "/models/yoshi.glb?v=lowered55-corrected",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -269,7 +269,7 @@
     "id": "luigi",
     "name": "Luigi",
     "category": "Personnages",
-    "model": "/models/luigi.glb",
+    "model": "/models/luigi.glb?v=lowered55-corrected",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -288,7 +288,7 @@
     "id": "peach",
     "name": "Peach",
     "category": "Personnages",
-    "model": "/models/peach-low.glb",
+    "model": "/models/peach-low.glb?v=lowered55",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -307,7 +307,7 @@
     "id": "daisy",
     "name": "Daisy",
     "category": "Personnages",
-    "model": "/models/daisy.glb",
+    "model": "/models/daisy.glb?v=lowered55-corrected",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -326,7 +326,7 @@
     "id": "toad",
     "name": "Toad",
     "category": "Personnages",
-    "model": "/models/toad.glb",
+    "model": "/models/toad.glb?v=lowered55-corrected",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -345,7 +345,7 @@
     "id": "toadette",
     "name": "Toadette",
     "category": "Personnages",
-    "model": "/models/toadette.glb",
+    "model": "/models/toadette.glb?v=lowered55-corrected",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -364,7 +364,7 @@
     "id": "wario",
     "name": "Wario",
     "category": "Personnages",
-    "model": "/models/wario.glb",
+    "model": "/models/wario.glb?v=lowered55-corrected",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -383,7 +383,7 @@
     "id": "waluigi",
     "name": "Waluigi",
     "category": "Personnages",
-    "model": "/models/waluigi.glb",
+    "model": "/models/waluigi.glb?v=lowered55-corrected",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
@@ -402,7 +402,7 @@
     "id": "bowser",
     "name": "Bowser",
     "category": "Personnages",
-    "model": "/models/bowser.glb",
+    "model": "/models/bowser.glb?v=lowered55-corrected",
     "thumbnail": null,
     "initialScale": 1,
     "initialRotation": [
