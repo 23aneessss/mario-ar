@@ -1,17 +1,23 @@
 # Caméra 3D
 
-Application Next.js / React / Three.js, avec PostgreSQL et SeaweedFS dans Docker. Aucune dépendance à Supabase.
+Application Next.js / React / Three.js, avec PostgreSQL et SeaweedFS en option pour le partage. Aucune dépendance à Supabase.
 
 L’interface contient uniquement la caméra, l’ajout d’éléments, les réglages de l’objet sélectionné, la capture et le partage. Les objets restent positionnés dans le cadre de l’écran : il n’y a pas de suivi spatial.
 
+## Déployer sur Vercel
+
+Le déploiement Vercel est indépendant de Docker. Importer le dépôt dans Vercel, conserver le framework `Next.js` détecté automatiquement et utiliser `npm run build` comme commande de build. Aucun fichier Docker n’est requis.
+
+La caméra, les modèles 3D, la capture et le téléchargement local fonctionnent sans variables d’environnement. Le partage nécessite une base PostgreSQL et un stockage S3 accessibles depuis les fonctions Node.js de Vercel. Configurer alors `DATABASE_URL`, `S3_ENDPOINT`, `S3_REGION`, `S3_BUCKET`, `S3_ACCESS_KEY`, `S3_SECRET_KEY`, `RATE_LIMIT_SECRET` et `PUBLIC_BASE_URL` dans Vercel. `PUBLIC_BASE_URL` doit être l’URL HTTPS publique du projet.
+
 ## Lancer en développement
 
-Node.js 22 ou plus récent et Docker Compose sont requis.
+Node.js 22 ou plus récent est requis. Docker Compose est optionnel et sert uniquement à lancer les services locaux de partage.
 
 ```sh
 npm install
 npm run setup:env
-docker compose up -d db storage
+docker compose -f .docker/compose.yaml up -d db storage
 npm run dev
 ```
 
@@ -23,7 +29,7 @@ Sans Docker ou sans configuration de partage, la caméra, les éléments 3D, la 
 
 ```sh
 npm run setup:env
-docker compose up -d --build
+docker compose -f .docker/compose.yaml up -d --build
 ```
 
 `APP_PORT` dans `.env` permet de changer le port HTTP local. PostgreSQL utilise le port local 5434 ; le stockage S3 utilise 8333. Les volumes `postgres_data` et `storage_data` conservent les données après un redémarrage. Le service `cleanup` supprime les photos expirées toutes les heures. Ne pas supprimer les volumes pour une mise à jour.
@@ -47,7 +53,7 @@ PHOTO_RETENTION_DAYS=7
 Puis :
 
 ```sh
-docker compose --profile https up -d --build
+docker compose -f .docker/compose.yaml --profile https up -d --build
 ```
 
 Caddy sert l’application avec HTTPS. Il remplace les en-têtes d’adresse cliente utilisés pour la limitation des envois. Garder `TRUST_PROXY=false` en accès direct ; dans ce cas, la limite est partagée entre les clients. La limite est de 30 envois par fenêtre de 10 minutes. La durée des photos est configurable entre 1 et 30 jours.
@@ -94,8 +100,8 @@ GLB autonome recommandé, avec textures embarquées. glTF fonctionne si ses fich
 - `src/components/photo-result.tsx` : téléchargement, envoi, reprise, QR code.
 - `src/lib/server` et `src/app/api` : validation, stockage, partage et nettoyage.
 - `src/app/p/[token]` : consultation sans compte ni caméra.
-- `docker/001-init.sql` : schéma de base de données.
-- `compose.yaml` et `docker/Caddyfile` : auto-hébergement.
+- `.docker/docker/001-init.sql` : schéma de base de données Docker.
+- `.docker/compose.yaml`, `.docker/Dockerfile` et `.docker/docker/Caddyfile` : auto-hébergement Docker optionnel.
 
 ## État de validation
 

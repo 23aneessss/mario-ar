@@ -32,9 +32,11 @@ services:
       timeout: 3s
       retries: 20
   app:
-    build: .
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
     restart: unless-stopped
-    env_file: .env
+    env_file: ../.env
     environment:
       DATABASE_URL: postgres://${POSTGRES_USER:-mario}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-mario}
       S3_ENDPOINT: http://storage:8333
@@ -52,7 +54,7 @@ services:
     restart: unless-stopped
     environment:
       CLEANUP_SECRET: ${CLEANUP_SECRET}
-    volumes: ["./scripts/cleanup-worker.mjs:/worker.mjs:ro"]
+    volumes: ["../scripts/cleanup-worker.mjs:/worker.mjs:ro"]
     command: ["node", "/worker.mjs"]
     depends_on:
       app: {condition: service_healthy}

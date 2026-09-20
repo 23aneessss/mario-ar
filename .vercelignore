@@ -1,0 +1,10 @@
+.docker/
+Dockerfile
+compose.yaml
+docker/
+.env*
+!.env.example
+docs/
+tests/
+playwright-report/
+test-results/
